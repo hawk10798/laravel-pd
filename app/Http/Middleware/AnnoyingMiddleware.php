@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class EnsureTokenIsValid
+class AnnoyingMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,9 +15,9 @@ class EnsureTokenIsValid
      */
     public function handle($request, Closure $next)
     {
-        if($request->input('token') !== 'super-secret-token') {
-            return redirect('oops');
-        }
+        echo '<script language="javascript">';
+        echo 'alert("SUPER ANNOYING MIDDLEWARE ALERT")';
+        echo '</script>';
 
         return $next($request);
     }
