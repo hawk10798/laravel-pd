@@ -39,29 +39,38 @@
             @endif
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1 class="text-5xl font-bold text-red-700">WELCOME</h1>
-                </div>
+                <form method="POST" action="{{route('hello')}}">
+                    @csrf
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <p class="text-3xl font-bold text-orange-300">THIS IS SOME TEXT!</p>
-                        </div>
+                    <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                        <h1 class="text-5xl font-bold text-red-700">WELCOME</h1>
+                    </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <p class="text-3xl font-bold text-orange-300">SO IS THIS</p>
-                        </div>
+                    <div class="my-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6">
+                                <p class="text-xl font-bold text-orange-300">What is yer name?</p>
+                            </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <p class="text-3xl font-bold text-orange-300"> OMG MORE TEXT</p>
-                        </div>
+                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
+                                <input type="text" name="name" class="p-2 rounded w-full">
+                            </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <p class="text-3xl font-bold text-orange-300">WHEN WILL IT END</p>
+                            <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+                                <p class="text-xl font-bold text-orange-300">What is yer favourite colour?</p>
+                            </div>
+
+                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
+                                <select id="form-colour" name="colour" class="p-2 rounded w-full">
+                                    <option value="red">Red</option>
+                                    <option value="blue">Blue</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <button type="submit" class="p-3 rounded bg-green-400 text-white font-semibold">Continue</button>
+                </form>
             </div>
         </div>
     </body>
