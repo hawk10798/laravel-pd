@@ -29,8 +29,54 @@
                         <h1 class="text-5xl font-bold text-red-700">WELCOME TO THE MOVIE SITE</h1>
                     </div>
                     <div class="my-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                        <div class="p-6 w-full">
-                            <p class="text-m font-bold text-white">{{$response}}</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Title</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$title}}</p>
+                            </div>
+
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Director</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$director}}</p>
+                            </div>
+
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Released</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$released}}</p>
+                            </div>
+
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Rated</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$rating}}</p>
+                            </div>
+
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Year</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$year}}</p>
+                            </div>
+
+                            <div class="p-6">
+                                <p class="text-m font-bold text-yellow-300">Genre</p>
+                            </div>
+                            
+                            <div class=p-6>
+                                <p class="text-m font-bold text-white">{{$genre}}</p>
+                            </div>
                         </div>
                     </div>
             </div>

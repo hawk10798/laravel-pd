@@ -10,15 +10,20 @@ class HomeController extends Controller
 
     public function show()
     {
+        $movie = $this->getMoviesList();
+
         return view('home', [
-            'response' => $this->getMoviesList()
+            'title' => $movie['Title'],
+            'director' => $movie['Director'],
+            'released' => $movie['Released'],
+            'rating' => $movie['Rated'],
+            'year' => $movie['Year'],
+            'genre' => $movie['Genre']
         ]);
     }
 
     private function getMoviesList()
     {
-        $response = Http::get('http://www.omdbapi.com/?apikey=' . self::OMDB_API_KEY . '&t=A')->body();
-
-        return $response;
+        return Http::get('http://www.omdbapi.com/?apikey=' . self::OMDB_API_KEY . '&t=A');
     }
 }
