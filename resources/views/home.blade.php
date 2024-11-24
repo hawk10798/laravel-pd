@@ -24,53 +24,15 @@
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <form method="POST" action="{{route('hello')}}">
-                    @csrf
-
                     <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                        <h1 class="text-5xl font-bold text-red-700">WELCOME</h1>
+                        <h1 class="text-5xl font-bold text-red-700">WELCOME TO THE MOVIE SITE</h1>
                     </div>
-
                     <div class="my-3 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                        <div class="grid grid-cols-1 md:grid-cols-2">
-                            <div class="p-6">
-                                <p class="text-xl font-bold text-orange-300">What is yer name?</p>
-                            </div>
-
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                                <input type="text" name="name" class="p-2 rounded w-full">
-                            </div>
-
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                                <p class="text-xl font-bold text-orange-300">What is yer favourite colour?</p>
-                            </div>
-
-                            <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                                <select id="form-colour" name="colour" class="p-2 rounded w-full">
-                                    <option value="red">Red</option>
-                                    <option value="blue">Blue</option>
-                                </select>
-                            </div>
+                        <div class="p-6 w-full">
+                            <p class="text-m font-bold text-white">{{$response}}</p>
                         </div>
                     </div>
-                    
-                    <button type="submit" class="p-3 rounded bg-green-400 text-white font-semibold">Continue</button>
-                </form>
             </div>
         </div>
     </body>

@@ -2,7 +2,7 @@
 
 use App\Http\Middleware\AnnoyingMiddleware;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +15,4 @@ use App\Http\Controllers\FormController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-    
-Route::post('/hello', [FormController::class, 'show'])->middleware('annoying')->name('hello');
+Route::get('/', [HomeController::class, 'show']);
