@@ -77,10 +77,6 @@
                             <div class=p-6>
                                 <p class="text-m font-bold text-white">{{$genre}}</p>
                             </div>
-
-                            <div class="p-6">
-                                <p class="text-m font-bold text-yellow-300">Test</p>
-                            </div>
                         </div>
                     </div>
             </div>
